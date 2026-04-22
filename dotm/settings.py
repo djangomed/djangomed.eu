@@ -12,20 +12,33 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 
 from pathlib import Path
 
+import environ
+from environ.secrets import INISecrets
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+ini_secrets = INISecrets.from_path_in_env(
+    "DOTM_SECRETS_INI", default=str(BASE_DIR / "dev.ini")
+)
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-*1&cv0@9sdo_6!mdw%a4+^%5v(j=)k6d&bu6t57=i=@0bz8dos'
+@environ.config(prefix="DOTM")
+class AppConfig:
+    debug = environ.bool_var(default=True)
+    secret_key = ini_secrets.secret()
+    database_name = environ.var(default=str(BASE_DIR / "db.sqlite3"))
+    static_root = environ.var(default=str(BASE_DIR / "staticfiles"))
+    media_root = environ.var(default=str(BASE_DIR / "media"))
+    allowed_hosts = environ.var(default="*")
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
+cfg = AppConfig.from_environ()
+
+DEBUG = cfg.debug
+SECRET_KEY = cfg.secret_key
+
+ALLOWED_HOSTS = cfg.allowed_hosts.split(",")
 
 
 # Application definition
@@ -76,7 +89,7 @@ WSGI_APPLICATION = 'dotm.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': cfg.database_name,
     }
 }
 
@@ -116,3 +129,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = cfg.static_root
+MEDIA_ROOT = cfg.media_root
