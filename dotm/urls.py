@@ -25,10 +25,15 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("admin/", admin.site.urls),
     path(
-    	"", 
-    	TemplateView.as_view(template_name="dotm/index.html"), 
-    	name="homepage"
+        "",
+        TemplateView.as_view(template_name="dotm/index.html"),
+        name="homepage",
+    ),
+    path(
+        "2026/pescara/",
+        TemplateView.as_view(template_name="dotm/2026/pescara.html"),
+        name="pescara-2026",
     ),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

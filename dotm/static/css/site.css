@@ -1,0 +1,46 @@
+.event-hero img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+  border-radius: var(--pico-border-radius);
+}
+
+#venue-map {
+  min-height: 24rem;
+  border-radius: var(--pico-border-radius);
+}
+
+@media (max-width: 576px) {
+  .event-hero img {
+    aspect-ratio: 4 / 3;
+  }
+
+  #venue-map {
+    min-height: 20rem;
+  }
+}
+
+.event-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1rem;
+}
+
+.event-details > div {
+  padding: 1rem;
+  border: 1px solid var(--pico-muted-border-color);
+  border-radius: var(--pico-border-radius);
+}
+
+.event-details dt {
+  color: var(--pico-muted-color);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.event-details dd {
+  margin: 0.25rem 0 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+}

@@ -1,0 +1,579 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Django on the Med 2026 in Pescara | Django Development Sprints</title>
+
+    <meta charset="utf-8">
+    <meta
+      name="description"
+      content="Django on the Med 2026. Three mornings of Django development sprints in Pescara, Italy, from 23 to 25 September 2026."
+    >
+    <meta
+      name="keywords"
+      content="Django, Development, Sprints, Django Development Sprints, Pescara"
+    >
+    <meta name="author" content="Django on the Med">
+    <meta name="color-scheme" content="light dark">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#13171f">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link
+      rel="stylesheet"
+      href="{% static 'css/pico.min.css' %}"
+    >
+    <link
+      rel="stylesheet"
+      href="{% static 'css/site.css' %}"
+    >
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    >
+
+    <link
+      rel="apple-touch-icon"
+      sizes="128x128"
+      href="{% static 'images/apple-touch-icon.png' %}"
+    >
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏖️</text></svg>"
+    >
+    <link
+      rel="canonical"
+      href="https://djangomed.eu/2026/pescara/"
+    >
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta
+      name="twitter:title"
+      content="Django on the Med 2026 in Pescara"
+    >
+    <meta
+      name="twitter:description"
+      content="Three mornings of Django development sprints in Pescara, Italy, from 23 to 25 September 2026."
+    >
+    <meta
+      name="twitter:image"
+      content="https://djangomed.eu/static/images/2026/pescara.webp"
+    >
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="Django on the Med 🏖️">
+    <meta
+      property="og:title"
+      content="Django on the Med 2026 in Pescara"
+    >
+    <meta
+      property="og:description"
+      content="Three mornings of Django development sprints in Pescara, Italy, from 23 to 25 September 2026."
+    >
+    <meta
+      property="og:url"
+      content="https://djangomed.eu/2026/pescara/"
+    >
+    <meta
+      property="og:image"
+      content="https://djangomed.eu/static/images/2026/pescara.webp"
+    >
+    <meta
+      property="og:image:alt"
+      content="The Ponte del Mare crossing the harbour in Pescara, with palm trees in the foreground"
+    >
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Django on the Med 2026",
+        "description": "Three mornings to get together and work on Django in Pescara, Italy.",
+        "startDate": "2026-09-23",
+        "endDate": "2026-09-25",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "isAccessibleForFree": true,
+        "url": "https://djangomed.eu/2026/pescara/",
+        "image": "https://djangomed.eu/static/images/2026/pescara.webp",
+        "location": {
+          "@type": "Place",
+          "name": "Hotel Plaza Pescara",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Piazza Sacro Cuore 55",
+            "postalCode": "65122",
+            "addressLocality": "Pescara",
+            "addressCountry": "IT"
+          }
+        },
+        "organizer": {
+          "@type": "Organization",
+          "name": "Django on the Med",
+          "url": "https://djangomed.eu/"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "url": "https://tickets.djangomed.eu/2026/",
+          "availability": "https://schema.org/LimitedAvailability"
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <header class="container">
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li>
+            <a href="{% url 'homepage' %}">
+              <strong>Django on the Med 🏖️</strong>
+            </a>
+          </li>
+        </ul>
+
+        <ul>
+          <li><a href="#venue">Venue</a></li>
+          <li><a href="#accommodation">Accommodation</a></li>
+          <li><a href="#travel">Travel</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <header>
+        <p>Django on the Med 🏖️ · Edition 2</p>
+
+        <h1>Django on the Med 2026</h1>
+
+        <p>
+          <strong>Pescara, Italy</strong><br>
+          <time datetime="2026-09-23">23</time>–<time datetime="2026-09-25">25 September 2026</time>
+        </p>
+
+        <p>
+          Three mornings to get together and work on Django,
+          followed by optional activities and time to explore the area.
+        </p>
+
+      </header>
+
+      <figure class="event-hero">
+        <img
+          src="{% static 'images/2026/pescara.webp' %}"
+          alt="The Ponte del Mare crossing the harbour in Pescara, with palm trees in the foreground"
+          width="2000"
+          height="875"
+          fetchpriority="high"
+        >
+        <figcaption>
+          The Ponte del Mare in Pescara.
+          Photo by
+          <a href="https://flic.kr/p/2nJbTpo">Paolo Melchiorre</a>,
+          published under a Creative Commons licence.
+        </figcaption>
+      </figure>
+
+      <section aria-labelledby="event-details">
+        <h2 id="event-details"><span aria-hidden="true">📅</span> Event details</h2>
+
+      <dl class="event-details">
+        <div>
+          <dt>Dates</dt>
+          <dd>23–25 September 2026</dd>
+        </div>
+
+        <div>
+          <dt>Sprint sessions</dt>
+          <dd>Three mornings, roughly from 08:30 to 13:30</dd>
+        </div>
+
+        <div>
+          <dt>Venue</dt>
+          <dd>Hotel Plaza Pescara</dd>
+        </div>
+
+        <div>
+          <dt>Participation</dt>
+          <dd>Free, with registration required</dd>
+        </div>
+
+        <div>
+          <dt>Availability</dt>
+          <dd>Limited, with only a few places left</dd>
+        </div>
+      </dl>
+      </section>
+
+      <section aria-labelledby="registration">
+        <h2 id="registration"><span aria-hidden="true">🎟️</span> Registration</h2>
+
+        <p>
+          Participation is free, but registration is required and
+          places are limited.
+        </p>
+
+        <p>
+          There are only a few places left, so please register only
+          if you are sure you can attend.
+        </p>
+
+        <p>
+          <a href="https://tickets.djangomed.eu/2026/" role="button">
+            Get your free ticket
+          </a>
+        </p>
+      </section>
+
+      <section aria-labelledby="about">
+        <h2 id="about"><span aria-hidden="true">🏖️</span> About Django on the Med</h2>
+
+        <p>
+          Django on the Med is a small, focused development sprint event.
+          It brings people together for three days to work on Django and
+          make progress on challenging issues in the core framework and
+          its ecosystem.
+        </p>
+
+        <p>
+          Experienced contributors and people making their first
+          contributions are both welcome. The aim is to provide time,
+          shared space and support for working together.
+        </p>
+      </section>
+
+      <section id="venue" aria-labelledby="venue-heading">
+        <h2 id="venue-heading"><span aria-hidden="true">📍</span> Venue</h2>
+
+        <p>
+          The sprint sessions will take place at Hotel Plaza Pescara,
+          in the city centre.
+        </p>
+
+        <address>
+          <strong>Hotel Plaza Pescara</strong><br>
+          Piazza Sacro Cuore 55<br>
+          65122 Pescara<br>
+          Italy
+        </address>
+
+        <p>
+          We will meet for three sprint mornings, roughly from
+          <time datetime="08:30">08:30</time> to
+          <time datetime="13:30">13:30</time>.
+        </p>
+
+        <p>
+          The venue is very close to Pescara Centrale railway station
+          and the bus terminal.
+        </p>
+
+        <p>
+          You are welcome to arrive earlier or stay longer if you would
+          like to spend more time in Pescara or explore the surrounding
+          area. The event itself will take place during the three sprint
+          mornings at Hotel Plaza.
+        </p>
+
+        <figure>
+          <div
+            id="venue-map"
+            aria-label="Map showing Hotel Plaza Pescara, Pescara Centrale railway station, the bus terminal and the Ponte del Mare"
+          ></div>
+
+          <figcaption>
+            Hotel Plaza is a short walk from Pescara Centrale railway
+            station and the bus terminal.
+            <a
+              href="https://www.openstreetmap.org/?mlat=42.470701&amp;mlon=14.206976#map=17/42.470701/14.206976"
+            >
+              Open the venue on OpenStreetMap
+            </a>.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section id="accommodation" aria-labelledby="accommodation-heading">
+        <h2 id="accommodation-heading"><span aria-hidden="true">🏨</span> Accommodation</h2>
+
+        <p>
+          Hotel Plaza offers agreed rates for Django on the Med
+          participants. Staying there may be the simplest option,
+          because the sprint room is located in the same hotel.
+        </p>
+
+        <p>
+          The agreed rates are per room, per night, with breakfast included.
+        </p>
+
+        <div class="overflow-auto">
+          <table>
+            <caption>Hotel Plaza agreed rates</caption>
+            <thead>
+              <tr>
+                <th scope="col">Room</th>
+                <th scope="col">Price per night</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Single Room with French bed</td>
+                <td>€95</td>
+              </tr>
+              <tr>
+                <td>Classic Double Room for single use</td>
+                <td>€100</td>
+              </tr>
+              <tr>
+                <td>Comfort Double Room for single use</td>
+                <td>€120</td>
+              </tr>
+              <tr>
+                <td>Comfort Double or Twin Room</td>
+                <td>€138</td>
+              </tr>
+              <tr>
+                <td>Superior Double or Twin Room</td>
+                <td>€150</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3><span aria-hidden="true">✉️</span>How to book</h3>
+
+        <p>
+          To use the agreed rates, please book directly with Hotel Plaza.
+          Django on the Med does not manage room reservations or payments.
+        </p>
+
+        <address>
+          Email:
+          <a href="mailto:plaza@shotels.it">plaza@shotels.it</a><br>
+          Phone:
+          <a href="tel:+390854514625">+39 085 4514625</a>
+        </address>
+
+        <p>
+          Please mention the booking code:
+          <strong>Django on the Med Meeting</strong>.
+        </p>
+
+        <p>
+          Rooms are subject to availability at the time of booking.
+          Reservations and payments are handled directly between each
+          guest and the hotel.
+        </p>
+
+        <h3><span aria-hidden="true">🛏️</span> Other accommodation</h3>
+
+        <p>
+          You are completely free to stay somewhere else. There are many
+          hotels and B&amp;Bs nearby, including cheaper options and places
+          closer to the seafront.
+        </p>
+
+        <p>
+          We suggest choosing accommodation within about ten minutes on
+          foot from the venue, so it is easy for everyone to meet in the
+          morning.
+        </p>
+
+        <p>
+          If you are not sure where to stay,
+          <a href="mailto:info@djangomed.eu">contact us</a>
+          and we will try to help with local suggestions. You can also get
+          in touch if you are interested in sharing accommodation, as
+          other participants may be interested too.
+        </p>
+      </section>
+
+      <section id="travel" aria-labelledby="travel-heading">
+        <h2 id="travel-heading"><span aria-hidden="true">🧭</span> Getting to Pescara</h2>
+
+        <h3><span aria-hidden="true">✈️</span> By plane</h3>
+
+        <p>
+          Pescara Abruzzo Airport has direct connections with several
+          European countries, including Albania, Belgium, the Czech
+          Republic, Germany, Malta, Poland, Romania, Spain and the
+          United Kingdom, with some seasonal variations.
+        </p>
+
+        <p>
+          From outside Europe, the easiest options are flying to Rome
+          and taking a direct bus from Fiumicino Airport, or flying to
+          Milan and continuing by domestic flight or train.
+        </p>
+
+        <h3><span aria-hidden="true">🚆</span> By train</h3>
+
+        <p>
+          Pescara is well connected by fast trains to Bologna, Milan,
+          Turin, Venice, Bari, Lecce and Bolzano, as well as by direct
+          routes from Rome.
+        </p>
+
+        <p>
+          From abroad, Milan and Bologna can be reached directly by train
+          from countries including France, Switzerland, Austria and
+          Germany, before continuing to Pescara.
+        </p>
+
+        <p>
+          There is also a historic railway between Rome and Pescara.
+          It is slower, but offers a scenic route through the mountains.
+        </p>
+
+        <h3><span aria-hidden="true">🚌</span> By bus</h3>
+
+        <p>
+          There are frequent long-distance bus connections, including
+          direct routes from Rome and Fiumicino Airport, as well as from
+          other Italian cities.
+        </p>
+
+        <h3><span aria-hidden="true">🚗</span> By car</h3>
+
+        <p>
+          Pescara is easy to reach through the motorway network,
+          including a direct motorway from Rome. Renting a car can also
+          be useful if you would like to explore the surrounding area.
+        </p>
+      </section>
+
+      <section aria-labelledby="schedule">
+        <h2 id="schedule"><span aria-hidden="true">💻</span> What the days look like</h2>
+
+        <p>
+          We will work on Django during the mornings, until early afternoon.
+        </p>
+
+        <p>
+          The rest of each day and the evenings are available for
+          exploring, socialising, relaxing or spending time independently.
+          All afternoon activities are optional.
+        </p>
+
+        <p>
+          You are welcome to arrive before the event or stay for longer
+          if you would like to explore Pescara and the surrounding area.
+        </p>
+      </section>
+
+      <section aria-labelledby="activities">
+        <h2 id="activities"><span aria-hidden="true">🌊</span> Afternoon activities</h2>
+
+        <p>
+          With the help of the local Pescara community, we are planning
+          some optional afternoon activities and informal networking
+          moments.
+        </p>
+
+        <p>
+          We would love to show you a little of both the sea and the
+          mountains around Pescara, but we are keeping the details as
+          a small surprise for now.
+        </p>
+      </section>
+
+      <section aria-labelledby="community">
+        <h2 id="community"><span aria-hidden="true">🤝</span> Community and accessibility</h2>
+
+        <p>
+          Django on the Med is a Django community event.
+          The
+          <a href="https://www.djangoproject.com/conduct/">
+            Django Code of Conduct
+          </a>
+          applies throughout the event.
+        </p>
+
+        <p>
+          If you have accessibility needs that may determine whether
+          you can attend, please
+          <a href="mailto:info@djangomed.eu">contact us</a>
+          and let us know.
+        </p>
+      </section>
+
+      <section aria-labelledby="sponsors">
+        <h2 id="sponsors"><span aria-hidden="true">💚</span> Sponsors</h2>
+
+        <p>
+          We are still looking for sponsors to support the event and
+          help keep it accessible and community-driven.
+        </p>
+
+        <p>
+          If your company is interested, please contact
+          <a href="mailto:info@djangomed.eu">info@djangomed.eu</a>.
+        </p>
+      </section>
+
+      <p>
+        Looking forward to seeing you in Pescara!<br>
+        The Django on the Med 🏖️ Team
+      </p>
+    </main>
+
+    <footer class="container">
+      <small>
+        <abbr title="Copyright">&copy;</abbr>
+        2025–2026 Django on the Med
+      </small>
+    </footer>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+
+    <script>
+      const places = [
+        {
+          name: "Hotel Plaza Pescara",
+          coordinates: [42.470701, 14.206976],
+        },
+        {
+          name: "Pescara Centrale railway station",
+          coordinates: [42.46862, 14.20396],
+        },
+        {
+          name: "Pescara bus terminal",
+          coordinates: [42.47020, 14.20494],
+        },
+        {
+          name: "Ponte del Mare - Pescara",
+          coordinates: [42.46700, 14.22481],
+        },
+      ];
+
+      const map = L.map("venue-map");
+
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        referrerPolicy: 'strict-origin-when-cross-origin',
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      }).addTo(map);
+
+      const markers = places.map((place) =>
+        L.marker(place.coordinates)
+          .addTo(map)
+          .bindPopup(place.name)
+      );
+
+      markers[0].openPopup();
+
+      const markerGroup = L.featureGroup(markers);
+      map.fitBounds(markerGroup.getBounds().pad(0.35));
+    </script>
+  </body>
+</html>
