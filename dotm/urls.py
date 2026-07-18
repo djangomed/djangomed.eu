@@ -36,4 +36,9 @@ urlpatterns = [
         TemplateView.as_view(template_name="dotm/2026/pescara.html"),
         name="pescara-2026",
     ),
+    path(
+        "funding/",
+        TemplateView.as_view(template_name="dotm/funding.html"),
+        name="funding",
+    ),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

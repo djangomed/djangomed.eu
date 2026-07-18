@@ -1,0 +1,217 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Support Django on the Med 🏖️ | Donate</title>
+
+    <meta charset="utf-8">
+    <meta
+      name="description"
+      content="Support Django on the Med. Donate to fund opportunity grants, so more people can join us for the sprints in Pescara."
+    >
+    <meta
+      name="keywords"
+      content="Django, Development, Sprints, Django Development Sprints, Donate, Opportunity Grants, Funding"
+    >
+    <meta name="author" content="Django on the Med">
+    <meta name="color-scheme" content="light dark">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#13171f">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link
+      rel="stylesheet"
+      href="{% static 'css/pico.min.css' %}"
+    >
+    <link
+      rel="stylesheet"
+      href="{% static 'css/site.css' %}"
+    >
+
+    <link
+      rel="apple-touch-icon"
+      sizes="128x128"
+      href="{% static 'images/apple-touch-icon.png' %}"
+    >
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏖️</text></svg>"
+    >
+    <link
+      rel="canonical"
+      href="https://djangomed.eu/funding/"
+    >
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta
+      name="twitter:title"
+      content="Support Django on the Med 🏖️"
+    >
+    <meta
+      name="twitter:description"
+      content="Donate to fund opportunity grants, so more people can join us for the sprints in Pescara."
+    >
+    <meta
+      name="twitter:image"
+      content="https://djangomed.eu/static/images/dotm-wide.png"
+    >
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="Django on the Med 🏖️">
+    <meta
+      property="og:title"
+      content="Support Django on the Med 🏖️"
+    >
+    <meta
+      property="og:description"
+      content="Donate to fund opportunity grants, so more people can join us for the sprints in Pescara."
+    >
+    <meta
+      property="og:url"
+      content="https://djangomed.eu/funding/"
+    >
+    <meta
+      property="og:image"
+      content="https://djangomed.eu/static/images/dotm-wide.png"
+    >
+    <meta
+      property="og:image:alt"
+      content="Django on the Med logo"
+    >
+  </head>
+
+  <body>
+    <header class="container">
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li>
+            <a href="{% url 'homepage' %}">
+              <strong>Django on the Med 🏖️</strong>
+            </a>
+          </li>
+        </ul>
+
+        <ul>
+          <li><a href="{% url 'pescara-2026' %}">Pescara 2026</a></li>
+          <li><a href="#donate">Donate</a></li>
+          <li><a href="#grants">Grants</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <header>
+        <p>Django on the Med 🏖️</p>
+
+        <h1>Support the event</h1>
+
+        <p>
+          Django on the Med is free to attend, but getting there is not.
+          Travel, accommodation and food all add up, and for some people
+          that cost is the difference between coming and staying home.
+        </p>
+
+        <p>
+          Your donation funds <strong>opportunity grants</strong>, so that
+          people who might not otherwise be able to afford it can join us
+          and help push Django forwards.
+        </p>
+      </header>
+
+      <section id="donate" aria-labelledby="donate-heading">
+        <h2 id="donate-heading"><span aria-hidden="true">💛</span> Donate</h2>
+
+        <p>
+          Every contribution helps, whatever the amount. Donations are
+          collected securely through Stripe.
+        </p>
+
+        <p>
+          <a
+            href="https://buy.stripe.com/4gMbIIaqi5dweGnaKY1Fe01"
+            role="button"
+            class="donate-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Donate to Django on the Med
+          </a>
+        </p>
+      </section>
+
+      <section aria-labelledby="what-heading">
+        <h2 id="what-heading"><span aria-hidden="true">🎟️</span> What your donation does</h2>
+
+        <p>
+          The goal is simple: to make it easier for more of the community
+          to take part. Attending a sprint means time away and real costs,
+          and those costs fall unevenly. Opportunity grants help level
+          that out.
+        </p>
+
+        <p>
+          Grants go towards the costs of attending, so that being able to
+          come along depends less on what someone can personally afford.
+          We want the room to include experienced contributors and
+          first-timers alike, from as wide a range of backgrounds and
+          places as we can manage.
+        </p>
+      </section>
+
+      <section aria-labelledby="how-heading">
+        <h2 id="how-heading"><span aria-hidden="true">🤝</span> How the money is handled</h2>
+
+        <p>
+          Donations are collected and distributed by the
+          <a href="https://www.djangoproject.com/foundation/">
+            Django Software Foundation
+          </a>
+          (DSF). They hold the funds and pass grants on to recipients, so
+          the money is handled transparently and independently of the
+          organisers.
+        </p>
+
+        <p>
+          Everything raised goes towards opportunity grants for the event.
+          If we raise more than we can allocate this year, the surplus will
+          go towards future editions of Django on the Med. Anything left
+          beyond that stays with the DSF to support its wider work for the
+          Django community — so no donation goes to waste.
+        </p>
+      </section>
+
+      <section id="grants" aria-labelledby="grants-heading">
+        <h2 id="grants-heading"><span aria-hidden="true">🙋</span> Apply for a grant</h2>
+
+        <p>
+          If the cost of attending is a barrier for you, please get in
+          touch. We would much rather you asked than assumed the answer
+          is no.
+        </p>
+
+        <p>
+          You can email us at
+          <a href="mailto:info@djangomed.eu">info@djangomed.eu</a>
+          or ask in our
+          <a href="https://join.slack.com/t/djangoonthemed/shared_invite/zt-43g8jcitf-G4_5y8d__4rK4N7VvbFkjg">
+            Slack
+          </a>.
+          Requests are handled discreetly.
+        </p>
+      </section>
+
+      <p>
+        Thank you for helping keep Django on the Med open to everyone.<br>
+        The Django on the Med 🏖️ Team
+      </p>
+    </main>
+
+    <footer class="container">
+      <small>
+        <abbr title="Copyright">&copy;</abbr>
+        2025–2026 Django on the Med
+      </small>
+    </footer>
+  </body>
+</html>

@@ -44,3 +44,7 @@
   font-size: 1.05rem;
   font-weight: 600;
 }
+
+.donate-button {
+  margin-block: var(--pico-spacing);
+}

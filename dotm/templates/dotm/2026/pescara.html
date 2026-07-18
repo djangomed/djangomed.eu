@@ -141,6 +141,7 @@
           <li><a href="#venue">Venue</a></li>
           <li><a href="#accommodation">Accommodation</a></li>
           <li><a href="#travel">Travel</a></li>
+          <li><a href="{% url 'funding' %}">Support</a></li>
           <li><a href="https://join.slack.com/t/djangoonthemed/shared_invite/zt-43g8jcitf-G4_5y8d__4rK4N7VvbFkjg">Slack</a>
         </ul>
       </nav>
@@ -227,6 +228,22 @@
         <p>
           <a href="https://tickets.djangomed.eu/2026/" role="button">
             Get your free ticket
+          </a>
+        </p>
+      </section>
+
+      <section aria-labelledby="support">
+        <h2 id="support"><span aria-hidden="true">💛</span> Support the event</h2>
+
+        <p>
+          The event is free, but travel, accommodation and food are not.
+          Donations fund opportunity grants, so that people who might not
+          otherwise be able to afford it can join us in Pescara.
+        </p>
+
+        <p>
+          <a href="{% url 'funding' %}" role="button">
+            Donate or apply for a grant
           </a>
         </p>
       </section>
