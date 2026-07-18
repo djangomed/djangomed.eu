@@ -55,7 +55,12 @@
 
       <p>The second Django on the Med 🏖️ will be <strong>23rd-25th September 2026, in Pescara Italy</strong>.
       Hope to see you there!</p>
-      <p><a href="{% url 'pescara-2026' %}" role="button">Pescara 2026 details</a></p>
+      <p>
+        <a href="{% url 'pescara-2026' %}" role="button">Pescara 2026 details</a>
+        <a href="{% url 'funding' %}" role="button" class="secondary">Support the event</a>
+      </p>
+
+      <p>Help us offer <a href="{% url 'funding' %}">opportunity grants</a>, so folks for whom it's not so affordable can come along too.</p>
       <hr />
         <p>Sign up to our email list for updates. Django on the Med 🏖️ content only</p>
 
@@ -178,6 +183,9 @@ Give <strong>experienced contributors</strong> the space to collaborate and focu
 
         <h3>Can I sponsor?</h3>
         <p>Absolutely! The main thing we need is a <strong>Breakfast Sponsor</strong>. (Could that be you? Reach out!) If we can get more than that, we can try to do opportunity grants, and such.</p>
+
+        <h3>How can I help folks attend?</h3>
+        <p><a href="{% url 'funding' %}">Donate to support the event</a>. Your contribution funds opportunity grants, so that people who might not otherwise afford it can join us.</p>
 
       <footer>
         <small><abbr title="Copyright">&copy;</abbr> 2025 &ndash; 2026 Django on the Med</small>
