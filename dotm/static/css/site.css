@@ -11,6 +11,34 @@
   border-radius: var(--pico-border-radius);
 }
 
+/* Keep Pico's button styles out of Leaflet's interactive images and controls. */
+.leaflet-container .leaflet-marker-icon {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.leaflet-container .leaflet-bar a {
+  padding: 0;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.leaflet-container .leaflet-popup-close-button {
+  padding: 0;
+  box-shadow: none;
+}
+
+.leaflet-container [role="button"]:focus-visible {
+  outline: 2px solid #0078a8;
+  outline-offset: 2px;
+}
+
 @media (max-width: 576px) {
   .event-hero img {
     aspect-ratio: 4 / 3;
@@ -47,4 +75,21 @@
 
 .donate-button {
   margin-block: var(--pico-spacing);
+}
+
+section[aria-labelledby="supporting-organizations"] {
+  --partner-logo-outline-width: 2.5px;
+}
+
+section[aria-labelledby="supporting-organizations"] svg {
+  max-width: 100%;
+  height: auto;
+}
+
+section[aria-labelledby="supporting-organizations"] svg path {
+  stroke: #fff;
+  stroke-width: var(--partner-logo-outline-width);
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+  paint-order: markers stroke fill;
 }
