@@ -86,10 +86,12 @@ section[aria-labelledby="supporting-organizations"] svg {
   height: auto;
 }
 
-section[aria-labelledby="supporting-organizations"] svg path {
-  stroke: #fff;
-  stroke-width: var(--partner-logo-outline-width);
-  stroke-linejoin: round;
-  vector-effect: non-scaling-stroke;
-  paint-order: markers stroke fill;
+@media (prefers-color-scheme: dark) {
+  section[aria-labelledby="supporting-organizations"] svg path {
+    stroke: #fff;
+    stroke-width: var(--partner-logo-outline-width);
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+    paint-order: markers stroke fill;
+  }
 }
