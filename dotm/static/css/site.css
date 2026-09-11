@@ -77,21 +77,14 @@
   margin-block: var(--pico-spacing);
 }
 
-section[aria-labelledby="supporting-organizations"] {
-  --partner-logo-outline-width: 2.5px;
-}
-
 section[aria-labelledby="supporting-organizations"] svg {
   max-width: 100%;
   height: auto;
 }
 
 @media (prefers-color-scheme: dark) {
-  section[aria-labelledby="supporting-organizations"] svg path {
-    stroke: #fff;
-    stroke-width: var(--partner-logo-outline-width);
-    stroke-linejoin: round;
-    vector-effect: non-scaling-stroke;
-    paint-order: markers stroke fill;
+  section[aria-labelledby="supporting-organizations"] svg {
+    filter: drop-shadow(0 0 1px rgb(255 255 255 / 95%))
+      drop-shadow(0 0 1px rgb(255 255 255 / 80%));
   }
 }
