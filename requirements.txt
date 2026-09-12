@@ -1,7 +1,24 @@
-asgiref==3.11.1
-attrs==26.1.0
-Django==6.0.6
-environ-config==24.1.0
-gunicorn==26.0.0
-packaging==26.2
-sqlparse==0.5.5
+asgiref==3.12.1 \
+    --hash=sha256:59dcb51c272ad209d59bed5708a64a333083e86017d7fcdd67498eeab7784340 \
+    --hash=sha256:fe386d1c2bff7259ea95929266d12a8cf9a8b5a1c2598402967d8792e7a7c094
+    # via django
+attrs==26.1.0 \
+    --hash=sha256:c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309 \
+    --hash=sha256:d03ceb89cb322a8fd706d4fb91940737b6642aa36998fe130a9bc96c985eff32
+    # via environ-config
+django==6.1.1 \
+    --hash=sha256:585fb82bf15053c42cf52e67c2f1b54a032dca384759315fd6678ab1870d1d72 \
+    --hash=sha256:7ab93536d8e677aa14554c56426290c69480bf2ee68d7513d4a22f57d6bfeb84
+    # via (pyproject.toml:runtime)
+environ-config==26.1.0 \
+    --hash=sha256:7fe80885d22dd50218664c1e4e2c098429129387ddbb6e51318a3883639ae8b4 \
+    --hash=sha256:e5920e1c25f301c252f2e7eff0d64538b78a668311d730492664ee39f746b7dc
+    # via (pyproject.toml:runtime)
+gunicorn==26.2.0 \
+    --hash=sha256:62b864895d9ebff0b2f9867ba04fe811c93121596540830c9c916d0769668447 \
+    --hash=sha256:bd249d0b3f7972f7432f0a6b6ff3b3ee2d129f70cd1ff6c09a9dd9e29a2b88e3
+    # via (pyproject.toml:runtime)
+sqlparse==0.6.0 \
+    --hash=sha256:113c35c75365ab9cc9c7231d68c6428fb11c085fc8e9eb1ad659b7ddbf6cd2b9 \
+    --hash=sha256:b861c0288ce2fa56209a9a6412d2e066ac664b3873b89c26c9d8415e8e32996f
+    # via django

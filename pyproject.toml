@@ -1,0 +1,6 @@
+[dependency-groups]
+runtime = [
+    "django~=6.1.0",
+    "environ-config~=26.1.0",
+    "gunicorn~=26.2",
+]
