@@ -4,4 +4,5 @@ Django==6.0.6
 environ-config==24.1.0
 gunicorn==26.0.0
 packaging==26.2
+ruff==0.16.7
 sqlparse==0.5.5
