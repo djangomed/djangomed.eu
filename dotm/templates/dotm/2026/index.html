@@ -1,0 +1,193 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Django on the Med 2026 | Django Development Sprints</title>
+
+    <meta charset="utf-8">
+    <meta
+      name="description"
+      content="The Django on the Med events in 2026, with three mornings of Django development sprints in Pescara, Italy."
+    >
+    <meta
+      name="keywords"
+      content="Django, Development, Sprints, Django Development Sprints, 2026, Pescara"
+    >
+    <meta name="author" content="Django on the Med">
+    <meta name="color-scheme" content="light dark">
+    <meta name="fediverse:creator" content="@djangomed@fosstodon.org">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#13171f">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link
+      rel="stylesheet"
+      href="{% static 'css/pico.min.css' %}"
+    >
+    <link
+      rel="stylesheet"
+      href="{% static 'css/site.css' %}"
+    >
+
+    <link
+      rel="apple-touch-icon"
+      sizes="128x128"
+      href="{% static 'images/apple-touch-icon.png' %}"
+    >
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏖️</text></svg>"
+    >
+    <link
+      rel="canonical"
+      href="https://djangomed.eu/2026/"
+    >
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta
+      name="twitter:title"
+      content="Django on the Med 2026"
+    >
+    <meta
+      name="twitter:description"
+      content="The Django on the Med events in 2026, with three mornings of Django development sprints in Pescara, Italy."
+    >
+    <meta
+      name="twitter:image"
+      content="https://djangomed.eu/static/images/2026/pescara.webp"
+    >
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="Django on the Med 🏖️">
+    <meta
+      property="og:title"
+      content="Django on the Med 2026"
+    >
+    <meta
+      property="og:description"
+      content="The Django on the Med events in 2026, with three mornings of Django development sprints in Pescara, Italy."
+    >
+    <meta
+      property="og:url"
+      content="https://djangomed.eu/2026/"
+    >
+    <meta
+      property="og:image"
+      content="https://djangomed.eu/static/images/2026/pescara.webp"
+    >
+    <meta
+      property="og:image:alt"
+      content="The Ponte del Mare crossing the harbour in Pescara, with palm trees in the foreground"
+    >
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Django on the Med 2026",
+        "description": "The Django on the Med events in 2026.",
+        "url": "https://djangomed.eu/2026/",
+        "numberOfItems": 1,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "Event",
+              "name": "Django on the Med 2026",
+              "description": "Three mornings to get together and work on Django in Pescara, Italy.",
+              "startDate": "2026-09-23",
+              "endDate": "2026-09-25",
+              "eventStatus": "https://schema.org/EventScheduled",
+              "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+              "isAccessibleForFree": true,
+              "url": "https://djangomed.eu/2026/pescara/",
+              "image": "https://djangomed.eu/static/images/2026/pescara.webp",
+              "location": {
+                "@type": "Place",
+                "name": "Hotel Plaza Pescara",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "Piazza Sacro Cuore 55",
+                  "postalCode": "65122",
+                  "addressLocality": "Pescara",
+                  "addressCountry": "IT"
+                }
+              },
+              "organizer": {
+                "@type": "Organization",
+                "name": "Django on the Med",
+                "url": "https://djangomed.eu/"
+              }
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <header class="container">
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li>
+            <a href="{% url 'homepage' %}">
+              <strong>Django on the Med 🏖️</strong>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <header>
+        <nav aria-label="breadcrumb">
+          <ul>
+            <li><a href="{% url 'homepage' %}" aria-label="Django on the Med">🏖️</a></li>
+            <li>2026</li>
+          </ul>
+        </nav>
+      </header>
+
+      <article>
+        <h2><a href="{% url 'pescara-2026' %}">Django on the Med 2026</a></h2>
+
+        <p>
+          <strong>Pescara, Italy</strong><br>
+          <time datetime="2026-09-23">23</time>–<time datetime="2026-09-25">25 September 2026</time>
+        </p>
+
+        <p>
+          Three mornings to get together and work on Django,
+          followed by optional activities and time to explore the area.
+        </p>
+
+        <figure class="event-hero">
+          <img
+            src="{% static 'images/2026/pescara.webp' %}"
+            alt="The Ponte del Mare crossing the harbour in Pescara, with palm trees in the foreground"
+            width="2000"
+            height="875"
+            fetchpriority="high"
+          >
+          <figcaption>
+            The Ponte del Mare in Pescara.
+            Photo by
+            <a href="https://flic.kr/p/2nJbTpo" target="_blank" rel="noopener noreferrer">Paolo Melchiorre</a>,
+            published under a Creative Commons licence.
+          </figcaption>
+        </figure>
+
+      </article>
+    </main>
+
+    <footer class="container">
+      <small>
+        <abbr title="Copyright">&copy;</abbr>
+        2025–2026 Django on the Med
+         · <a rel="me noopener noreferrer" href="https://fosstodon.org/@djangomed" target="_blank">Mastodon</a>
+      </small>
+    </footer>
+  </body>
+</html>

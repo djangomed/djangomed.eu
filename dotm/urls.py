@@ -29,6 +29,11 @@ urlpatterns = [
         name="homepage",
     ),
     path(
+        "2026/",
+        TemplateView.as_view(template_name="dotm/2026/index.html"),
+        name="events-2026",
+    ),
+    path(
         "2026/pescara/",
         TemplateView.as_view(template_name="dotm/2026/pescara.html"),
         name="pescara-2026",
