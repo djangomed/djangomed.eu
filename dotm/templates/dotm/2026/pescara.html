@@ -150,7 +150,13 @@
 
     <main class="container">
       <header>
-        <p>Django on the Med 🏖️ · Edition 2</p>
+        <nav aria-label="breadcrumb">
+          <ul>
+            <li><a href="{% url 'homepage' %}" aria-label="Django on the Med">🏖️</a></li>
+            <li><a href="{% url 'events-2026' %}">2026</a></li>
+            <li>Pescara</li>
+          </ul>
+        </nav>
 
         <h1>Django on the Med 2026</h1>
 
@@ -504,7 +510,6 @@
               </a>
             </figure>
           </article>
-        </section>
 
           <article>
             <figure>
